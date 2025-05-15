@@ -10,7 +10,7 @@ export default function Home() {
 
   async function sendMessage() {
     if (!input.trim()) return;
-    const updated = [...messages, { role: "user", content: input }];
+    const updated: Message[] = [...messages, { role: "user", content: input }];
     setMessages(updated);
     setInput('');
     setLoading(true);
